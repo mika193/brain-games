@@ -1,6 +1,6 @@
 {
   "name": "mika193-games",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "brain-games.js",
   "scripts": {
@@ -29,5 +29,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
 }
