@@ -1,0 +1,33 @@
+{
+  "name": "mika193-games",
+  "version": "1.0.0",
+  "description": "",
+  "main": "brain-games.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mika193/project-lvl1-s412.git"
+  },
+  "author": "mika193",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mika193/project-lvl1-s412/issues"
+  },
+  "homepage": "https://github.com/mika193/project-lvl1-s412#readme",
+  "bin": {
+    "brain-games": "dist/bin/brain-games.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.3"
+  },
+  "files": [
+    "dist"
+  ]
+}
