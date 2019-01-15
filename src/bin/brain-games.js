@@ -1,7 +1,4 @@
 #!/usr/bin/env node
+import showGreet from '..';
 
-import showGreetText from '..';
-import greetUser from '../greetUser';
-
-showGreetText();
-greetUser();
+showGreet();

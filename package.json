@@ -1,6 +1,6 @@
 {
   "name": "mika193-games",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "a set of mini games launched from the console",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

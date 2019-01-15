@@ -1,5 +1,4 @@
-import startGame from '../startGame';
-import getRanomNumber from '../getRandomNumber';
+import getRanomNumber from '../utils';
 
 const operations = ['-', '+', '*'];
 const getSumm = (a, b) => a + b;
@@ -13,19 +12,17 @@ const operationsMap = {
 };
 
 export default () => {
-  console.log(`What is the result of the expression?
-  `);
+  const rules = 'What is the result of the expression?';
 
-  const getGameParams = () => {
+  const getRaundParams = () => {
     const firstNumber = getRanomNumber();
     const secondNumber = getRanomNumber();
     const operation = operations[getRanomNumber(0, operations.length)];
+    const question = `${firstNumber} ${operation} ${secondNumber}`;
+    const correctAnswer = String(operationsMap[operation](firstNumber, secondNumber));
 
-    return {
-      question: `${firstNumber} ${operation} ${secondNumber}`,
-      correctAnswer: String(operationsMap[operation](firstNumber, secondNumber)),
-    };
+    return { question, correctAnswer };
   };
 
-  startGame(getGameParams);
+  return { rules, getRaundParams };
 };

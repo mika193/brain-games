@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import showGreetText from '..';
-import checkHonesty from '../games/checkHonesty';
+import startGame from '../startGame';
 
-showGreetText();
-checkHonesty();
+startGame('brain-even');
