@@ -1,6 +1,6 @@
 {
   "name": "mika193-games",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "a set of mini games launched from the console",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/mika193/project-lvl1-s412#readme",
   "bin": {
     "brain-games": "dist/bin/brain-games.js",
-    "brain-even": "dist/bin/brain-even.js"
+    "brain-even": "dist/bin/brain-even.js",
+    "brain-calc": "dist/bin/brain-calc.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",

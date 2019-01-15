@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-
 import showGreetText from '..';
-import greetUser from '../greetUser';
+import calculate from '../games/calculate';
 
 showGreetText();
-greetUser();
+calculate();
