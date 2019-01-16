@@ -15,3 +15,19 @@ export const getGreatestCommonDivisor = (a, b) => {
 
   return findDivisor(smalestNumber);
 };
+
+export const getProgression = (progressionLength, progressionStep) => {
+  const firstNumber = getRandomNumber();
+
+  const iter = (counter, result) => {
+    if (counter === progressionLength) {
+      return result;
+    }
+
+    const newNumber = result[result.length - 1] + progressionStep;
+
+    return iter(counter + 1, [...result, newNumber]);
+  };
+
+  return iter(1, [firstNumber]);
+};
