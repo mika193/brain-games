@@ -1,18 +1,10 @@
 import readlineSync from 'readline-sync';
-import getEvenParams from './games/even';
-import getCalcParams from './games/calc';
 
 const maxAttempts = 3;
-const gameTypeMap = {
-  'brain-even': getEvenParams,
-  'brain-calc': getCalcParams,
-};
 
-export default (gameType) => {
-  const { rules, getRaundParams } = gameTypeMap[gameType]();
-
+export default (description, getRaundParams) => {
   console.log('Welcome to the Brain Games!');
-  console.log(rules);
+  console.log(description);
   console.log('');
 
   const userName = readlineSync.question('May I have your name? ');

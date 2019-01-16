@@ -1,4 +1,5 @@
 import getRanomNumber from '../utils';
+import startGame from '../startGame';
 
 const operations = ['-', '+', '*'];
 const getSumm = (a, b) => a + b;
@@ -12,7 +13,7 @@ const operationsMap = {
 };
 
 export default () => {
-  const rules = 'What is the result of the expression?';
+  const description = 'What is the result of the expression?';
 
   const getRaundParams = () => {
     const firstNumber = getRanomNumber();
@@ -24,5 +25,5 @@ export default () => {
     return { question, correctAnswer };
   };
 
-  return { rules, getRaundParams };
+  startGame(description, getRaundParams);
 };
