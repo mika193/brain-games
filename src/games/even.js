@@ -1,4 +1,4 @@
-import getRanomNumber from '../utils';
+import getRandomNumber from '../utils';
 import startGame from '../startGame';
 
 
@@ -8,7 +8,7 @@ export default () => {
   const description = 'Answer "yes" if number even otherwise answer "no".';
 
   const getRaundParams = () => {
-    const question = getRanomNumber();
+    const question = getRandomNumber();
     const correctAnswer = isEven(question) ? 'yes' : 'no';
 
     return { question, correctAnswer };
