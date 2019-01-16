@@ -12,18 +12,18 @@ const operationsMap = {
   '*': multiply,
 };
 
+const description = 'What is the result of the expression?';
+
+const getRaundParams = () => {
+  const firstNumber = getRandomNumber();
+  const secondNumber = getRandomNumber();
+  const operation = operations[getRandomNumber(0, operations.length)];
+  const question = `${firstNumber} ${operation} ${secondNumber}`;
+  const correctAnswer = String(operationsMap[operation](firstNumber, secondNumber));
+
+  return { question, correctAnswer };
+};
+
 export default () => {
-  const description = 'What is the result of the expression?';
-
-  const getRaundParams = () => {
-    const firstNumber = getRandomNumber();
-    const secondNumber = getRandomNumber();
-    const operation = operations[getRandomNumber(0, operations.length)];
-    const question = `${firstNumber} ${operation} ${secondNumber}`;
-    const correctAnswer = String(operationsMap[operation](firstNumber, secondNumber));
-
-    return { question, correctAnswer };
-  };
-
   startGame(description, getRaundParams);
 };
