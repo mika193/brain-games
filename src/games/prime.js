@@ -2,28 +2,13 @@ import getRandomNumber from '../utils';
 import startGame from '../startGame';
 
 const isPrime = (number) => {
-  if (number === 2) {
-    return true;
-  }
+  const firstDivisor = 3;
+  const changeDivisorStep = 2;
 
-  if (number <= 1 || number % 2 === 0) {
-    return false;
-  }
+  const iter = divisor => divisor * divisor > number
+    || (!number % divisor === 0 && iter(divisor + changeDivisorStep));
 
-  const checkParams = {
-    firstDivisor: 3,
-    changeDivisorStep: 2,
-  };
-
-  const iter = (divisor) => {
-    if (divisor * divisor > number) {
-      return true;
-    }
-
-    return number % divisor === 0 ? false : iter(divisor + checkParams.changeDivisorStep);
-  };
-
-  return iter(checkParams.firstDivisor);
+  return number <= 2 || number % 2 === 0 ? number === 2 : iter(firstDivisor);
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
