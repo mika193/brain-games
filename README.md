@@ -1,6 +1,6 @@
 #  "Brain Games"
 [![Maintainability](https://api.codeclimate.com/v1/badges/6fd879a51da152b6fe1f/maintainability)](https://codeclimate.com/github/mika193/brain-games/maintainability)
-[![Build Status](https://travis-ci.org/mika193/project-lvl1-s412.svg?branch=master)](https://travis-ci.org/mika193/project-lvl1-s412)
+[![Build Status](https://travis-ci.org/mika193/brain-games.svg?branch=master)](https://travis-ci.org/mika193/brain-games)
 
 ## Правила:
 Пользователь должен дать подряд три правильных ответа на вопросы по заданной теме
